@@ -1,0 +1,28 @@
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+.navbar-default {
+  border: none;
+  .navbar-brand{
+    background: $ttttc-green;
+    color: #fff;
+    &:hover{
+      background: $gray-darker;
+      color: $ttttc-green;
+    }
+    @include transition(all 0.3s linear);
+  }
+}
+.label-strike{
+  text-decoration: line-through;
+}
+
+#progress{
+  background:  $ttttc-green;
+  position: absolute;
+  height:4px;
+  width:100%;
+  left: auto;
+  right: 100%;
+  bottom: -4px;
+}
