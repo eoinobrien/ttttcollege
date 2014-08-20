@@ -50,7 +50,15 @@
             <h1 class="text-center">{{currentCat}}</h1>
 
             <ul class="categories">
-            <li ng-repeat="cat in categories">
+              <li>
+                <span ng-click="filterAll()">All</span>
+              </li>
+              &nbsp;
+              <li>
+                <span ng-click="filterEssential()">Essentials</span>
+              </li>
+              &nbsp;
+              <li ng-repeat="cat in categories">
                 <span ng-click="filterByCategory(cat)">{{cat}}</span>
               </li>
             </ul>
