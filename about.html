@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The Definitive list of everything you need to take to College, all in one easy-to-use place.">
-  <title>Things To Take To College</title>
+  <title>About : Things To Take To College</title>
 
   <!--Open Graph Card Info-->
   <meta property="og:title" content="Things To Take To College" />
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="en_GB" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://thingstotaketocollege.com/assets/images/list.png" />
-  <meta property="og:url" content="http://thingstotaketocollege.com/" />
+  <meta property="og:url" content="http://thingstotaketocollege.com/about.html/" />
   <meta property="fb:app_id" content="152389134968181" />
   <!--Twitter Card Info-->
   <meta name="twitter:card" content="summary">
@@ -72,8 +72,8 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li ><a href="about.html">About</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="about.html">About</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="nav-share">
@@ -86,47 +86,24 @@
         <div id="progress"></div>
       </nav>
 
-      <div ng-controller="ItemsController" class="container-fluid">
-        <div id="main">
+      <div ng-controller="AboutController" class="container-fluid">
+        <div id="about">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-              <h1 class="text-center">{{currentCat}}</h1>
-
-              <ul class="categories">
-                <li ng-click="filterAll()">
-                  <span>All</span>
-                </li>
-                &nbsp;
-                <li ng-click="filterEssential()">
-                  <span>Essentials</span>
-                </li>
-                &nbsp;
-                <span  ng-repeat="cat in categories">
-                  <li ng-click="filterByCategory(cat)">
-                    <span>{{cat}}</span>
-                  </li>
-                </span>
-              </ul>
-            </div>
-          </div>
-
-          <div class="row" id="list">
-            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-              <ul class="list-group">
-                <label ng-repeat="item in items" class="list-group-item category-{{isCategory}}">
-                  <li class="list-item-{{item.done}}">
-                    <input type="checkbox" ng-model="item.done"> {{item.title}}
-                    <small class="small-category">{{item.category}}</small>
-
-                    <span ng-if="item.essential" class="glyphicon glyphicon-star"></span>
-                  </li>
-                </label>
-              </ul>
+              <h1 class="text-center">About</h1>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <p>The definitive list of everything you need for college, in one easy to use place.</p>
+                  <p>Did we miss something on the list? Tell us on our <a href="https://www.facebook.com/WhatToTakeToCollegeIreland" title="What To Take To College">Facebook Page</a></p>
+                  <p>Want to email us? <a href="mailto:hello@thingstotaketocollege.com">hello@thingstotaketocollege.com</a></p>
+                  <p>Created tenderly by a group of DCU students.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="row footer">
+        <div class="row">
           <div class="col-xs-12 text-center">
             &copy; 2014 Things To Take To College - <a href="mailto:advertise@thingstotaketocollege.com" title="Advertise on Things To Take To College">Advertise</a> - Created by the lovely folks at <a href="https://twitter.com/NoodleStudents" title="Noodle on Twitter">Noodle</a>
           </div>

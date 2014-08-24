@@ -1,5 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+$ttttc-green: #669933;
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-base: $font-family-sans-serif;
+
 @import 'bootstrap/bootstrap';
 
+body{
+  padding-top: 70px;
+}
+
+.navbar{
+  border-radius: 0;
+}
 .navbar-default {
   border: none;
   .navbar-brand{
@@ -10,6 +23,16 @@
       color: $ttttc-green;
     }
     @include transition(all 0.3s linear);
+    @media (max-width: 345px) {
+      font-size: 14px;
+      padding-top: ($navbar-height - 14)/2;
+      padding-bottom: ($navbar-height - 14)/2;
+    }
+    @media (max-width: 290px) {
+      font-size: 12px;
+      padding-top: ($navbar-height - 12)/2;
+      padding-bottom: ($navbar-height - 12)/2;
+    }
   }
 }
 #progress{
@@ -25,6 +48,7 @@
 .list-item-true{
   text-decoration: line-through;
 }
+
 #list .list-group-item{
   padding-right: 30px;
   li{ list-style-type: none; }
@@ -38,10 +62,10 @@
 .label {
   display: inline-block;
   margin-bottom: 5px;
-  padding: 4px 8px;
+  padding: 6px 12px;
   border: 0;
   border-radius: 3px;
-  font-size: 12px;
+  font-size: 16px;
   transition: 0.1s all;
   -webkit-font-smoothing: antialiased;
 }
@@ -58,9 +82,10 @@
   }
 }
 .categories {
+  text-align: center;
   cursor: pointer;
+  padding-left: 0;
   li{
-    font-size: 1.2rem;
     margin-right: 5px;
     @extend .label;
     @extend .label-default;
@@ -71,3 +96,21 @@
   }
 }
 .text-center{ text-align: center; }
+.small-category{
+  color: #bbb;
+  font-weight: 400;
+  /*cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }*/
+}
+.category-true .small-category{ display: none; }
+
+.footer{ padding-bottom: $padding-base-vertical; }
+
+.nav-share div {
+  display: inline-block;
+  float: left;
+}
+.tw-share{ margin: 14px 0 12px 0; }
+.fb-share{ margin: 14px 3px 16px 0; }
