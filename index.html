@@ -117,7 +117,7 @@
             <ul class="list-group">
               <label class="list-group-item category-{{isCategory}}" ng-repeat="item in items">
                 <li class="list-item-{{item.done}}">
-                  <input type="checkbox" ng-model="item.done"> {{item.title}}
+                  <input type="checkbox" ng-model="item.done" ng-change="update()"> {{item.title}}
                   <small class="small-category">{{item.category}}</small>
 
                   <span ng-if="item.essential" class="glyphicon glyphicon-star"></span>
@@ -166,7 +166,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/javascripts/bootstrap.min.js"></script>
-        <script src="assets/javascripts/main-0.1.0.min.js"></script>
+        <script src="assets/javascripts/angular-stuff.js"></script>
 
         <!--Facebook SDK-->
         <div id="fb-root"></div>
