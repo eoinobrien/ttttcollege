@@ -8,6 +8,7 @@ $font-family-base: $font-family-sans-serif;
 
 body{
   padding-top: 70px;
+  overflow-x: hidden;
 }
 
 .navbar{
@@ -96,6 +97,9 @@ body{
   }
 }
 .text-center{ text-align: center; }
+.text-right{ text-align: right; }
+.font-100{ font-size: 100px; }
+
 .small-category{
   color: #bbb;
   font-weight: 400;
@@ -108,9 +112,11 @@ body{
 
 .footer{ padding-bottom: $padding-base-vertical; }
 
-.nav-share div {
+.nav-share div, .nav-share a {
   display: inline-block;
   float: left;
 }
 .tw-share{ margin: 14px 0 12px 0; }
 .fb-share{ margin: 14px 3px 16px 0; }
+
+
