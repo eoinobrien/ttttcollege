@@ -18,7 +18,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'assets/javascripts/main.min.js': ['<%= concat.dist.dest %>']
+          'assets/javascripts/bootstrap.min.js': ['assets/javascripts/bootstrap.js'],
+          'assets/javascripts/main-<%= pkg.version %>.min.js': ['assets/javascripts/angular-stuff.js']
         }
       }
     },
@@ -31,9 +32,9 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'assets/scss',
-          src: ['*.scss'],
+          src: ['style.scss'],
           dest: 'assets/css',
-          ext: '.css'
+          ext: '-<%= pkg.version %>.css'
         }]
       }
     },
@@ -41,9 +42,13 @@ module.exports = function(grunt) {
     watch: {
       tasks: ['concat', 'uglify', /*'jshint',*/],
       css: {
-        files: '**/*.scss',
+        files: 'assets/style.scss',
         tasks: ['sass']
       },
+      js: {
+        files: '**/*.js',
+        tasks: ['uglify']
+      }
     }
 
   });
