@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="ttttcollege" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,8 @@
 
   <!--Open Graph Card Info-->
   <meta property="og:title" content="Things To Take To College" />
-  <meta property="og:description"
-  content="The Definitive list of everything you need to take to College, all in one easy-to-use place." />
+  <meta property="og:description" content="The Definitive list of everything you need to take to College, all in one easy-to-use place."
+  />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://thingstotaketocollege.com/assets/images/list.png" />
@@ -42,75 +43,77 @@
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-    </head>
-    <body>
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">
-              <span class="glyphicon glyphicon-ok"></span>
-              Things To Take To <strong>College</strong>
-            </a>
-          </div>
+        <a class="navbar-brand" href="index.html">
+          <span class="glyphicon glyphicon-ok"></span> Things To Take To <strong>College</strong>
+        </a>
+      </div>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li ><a href="about.html">About</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="nav-share">
-                <div class="fb-share fb-like" data-href="http://thingstotaketocollege.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-                <div class="tw-share"><a href="https://twitter.com/share" class="twitter-share-button" data-via="NoodleStudents" data-hashtags="TTTTCollege,Uni">Tweet</a></div>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-share">
+            <div class="fb-share fb-like" data-href="http://thingstotaketocollege.com/" data-layout="button_count" data-action="like"
+              data-show-faces="false" data-share="true"></div>
+      <div class="tw-share"><a href="https://twitter.com/share" class="twitter-share-button" data-via="NoodleStudents" data-hashtags="TTTTCollege,Uni">Tweet</a></div>
+      </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
 
-      <div ng-controller="ItemsController" class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-            <h1 class="text-center">{{currentCat}}</h1>
+  <div ng-controller="ItemsController" class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+        <h1 class="text-center">{{currentCat}}</h1>
 
-            <ul class="categories">
-              <li ng-click="filterAll()">
-                All
-              </li>
-              &nbsp;
-              <li ng-click="filterEssential()">
-                Essentials
-              </li>
-              &nbsp;
-              <span  ng-repeat="cat in categories">
+        <ul class="categories">
+          <li ng-click="filterAll()">
+            All
+          </li>
+          &nbsp;
+          <li ng-click="filterEssential()">
+            Essentials
+          </li>
+          &nbsp;
+          <span ng-repeat="cat in categories">
                 <li ng-click="filterByCategory(cat)">
                   {{ cat }}
                 </li>
-              </span>
-              &nbsp;
-              <li ng-click="filterDone()">
-                Completed
-              </li>
-            </ul>
-          </div>
-        </div>
+              </span> &nbsp;
+          <li ng-click="filterDone()">
+            Completed
+          </li>
+        </ul>
+      </div>
+    </div>
 
-        <div class="row" id="list">
-          <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-            <ul class="list-group">
-              <label class="list-group-item category-{{isCategory}}" ng-repeat="item in items">
+    <div class="row" id="list">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+        <ul class="list-group">
+          <label class="list-group-item category-{{isCategory}}" ng-repeat="item in items">
                 <li class="list-item-{{item.done}}">
                   <input type="checkbox" ng-model="item.done" ng-change="update()"> {{item.title}}
                   <small class="small-category">{{item.category}}</small>
@@ -118,19 +121,19 @@
                   <span ng-if="item.essential" class="glyphicon glyphicon-star"></span>
                 </li>
               </label>
-            </ul>
+        </ul>
 
-            <div ng-if="items.length === 0">
-              <div class="panel panel-default">
-                <div class="panel-body row text-center">
-                  <span class="glyphicon glyphicon-unchecked font-100"></span>
-                    <h2>There is nothing here.</h2>
-                    <h4>You've ticked nothing off! Try to start ticking off your list</h4>
-                </div>
-              </div>
+        <div ng-if="items.length === 0">
+          <div class="panel panel-default">
+            <div class="panel-body row text-center">
+              <span class="glyphicon glyphicon-unchecked font-100"></span>
+              <h2>There is nothing here.</h2>
+              <h4>You've ticked nothing off! Try to start ticking off your list</h4>
             </div>
+          </div>
+        </div>
 
-<!--              <div ng-if="doneItems !== []">
+        <!--              <div ng-if="doneItems !== []">
                 <h2>Completed</h2>
                 <ul class="list-group">
                   <span ng-repeat="item in doneItems">
@@ -144,46 +147,24 @@
                     </label>
                   </span>
                 </ul>-->
-              </div>
-            </div>
-          </div>
+      </div>
+    </div>
+  </div>
 
-          <div class="row footer">
-            <div class="col-xs-12 text-center">
-            <a href="mailto:advertise@thingstotaketocollege.com" title="Advertise on Things To Take To College">Advertise</a> - Created by <a href="https://eoinobrien.ie/" title="Eoin O'Brien's Website'">Eoin O'Brien</a>
-            </div>
-          </div>
-        </div>
+  <div class="row footer">
+    <div class="col-xs-12 text-center">
+      Created by <a href="https://eoinobrien.ie/" title="Eoin O'Brien's Website'">Eoin O'Brien</a>
+    </div>
+  </div>
+  </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
-        <!--<script src="assets/javascripts/angular.js"></script>-->
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="assets/javascripts/bootstrap.min.js"></script>
-        <script src="assets/javascripts/main-1.0.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
+  <!--<script src="assets/javascripts/angular.js"></script>-->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/javascripts/bootstrap.min.js"></script>
+  <script src="assets/javascripts/main-1.0.1.min.js"></script>
+</body>
 
-        <!--Facebook SDK-->
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=152389134968181&version=v2.0";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-        <!--Twitter Tweet Button-->
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        <!--Anayltics Code-->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-53912150-1', 'auto');
-          ga('send', 'pageview');
-
-        </script>
-      </body>
-      </html>
+</html>
