@@ -14,3 +14,8 @@ test/screenshots/
 test/dummy_rails/log/*.log
 
 .DS_Store
+
+node_modules/
+bower_components/
+.vscode/
+.sass-cache/
